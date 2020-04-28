@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/test.css">
-<style>
-   .a {font-size: xx-large;}
-
-   table {
-    border-collapse: collapse;
-    border: 1px solid black;
-   }
-
-   .aa table {
-    border-collapse: collapse;
-   }
-
-   .aa table, td, th {
-  border: 1px solid black;
-}
-
-   .b {font-size: x-large;}
-
-   .c {font-size: x-large;}
-</style>
+    <link rel="stylesheet" type="text/css" href="css/view.css">
 
 </head>
+
 <body>
-    <div class="a">마크다운</div>
+    <div class="content-title1">마크다운</div>
     <hr>
     <div>위키백과, 우리 모두의 백과사전.</div>
     <br>
@@ -36,48 +18,48 @@
 
     <br>
 
-    <table>
+    <table class="desc">
         <tr>
             <th>목차</th>
         </tr>
         <tr>
             <td>1 역사</td>
-        </tr>    
+        </tr>
 
         <tr>
             <td>2 문법</td>
-        </tr>     
+        </tr>
 
         <tr>
             <td>3 같이 보기</td>
-        </tr> 
+        </tr>
 
         <tr>
             <td>4 각주</td>
-        </tr> 
+        </tr>
         <tr>
             <td>5 외부 링크</td>
-        </tr> 
-           
+        </tr>
+
     </table>
     <br>
 
-    <div class="b"><b>역사</b></div>
+    <div class="content-title2"><b>역사</b></div>
     <hr>
     <div class="content">존 그루버는 2004년에 문법 면에서 에런 스워츠와 중대한 협업을 통해 마크다운 언어를 만들었으며[2][3], 사람들이 읽기 쉽고 쓰기 쉬운 플레인 텍스트 포맷을 사용하여 쓸 수 있으면서 구조적으로 유효한 XHTML(또는 HTML)로 선택적 변환이 가능하게 하는 것이 목표이다.[4]</div>
 
     <br>
 
-    <div class="c"><b>문법</b></div>
+    <div class="content-title2"><b>문법</b></div>
     <hr>
     <div class="content">마크다운에서는 엔터키 한 번은 먹지 않는다. 문장이 같은 줄에 연이어 표시된다.</div>
 
-    <table id="aa">
+    <table class="desc">
         <tr>
             <th>마크다운</th>
             <th>적용결과</th>
         </tr>
-        
+
         <tr>
             <td>첫째 문장<br>둘째 문장<br>셋째 문장</td>
             <td>첫째 문장. 둘째 문장. 셋째 문장</td>
@@ -87,4 +69,5 @@
 
 
 </body>
+
 </html>

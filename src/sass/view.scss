@@ -1,0 +1,50 @@
+@charset "UTF-8";
+$docborder: 1px solid rgb(58, 47, 47);
+@mixin normal {
+    border: $docborder;
+    font-size: 0.8em;
+}
+
+body {
+    padding: 1em;
+}
+
+div.test>.step1 {
+    color: red;
+}
+
+div {
+    background-color: none;
+}
+
+.content-title1 {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.content-title2 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.content {
+    color: black;
+}
+
+table.desc {
+    border-radius: 3px;
+    border-collapse: collapse;
+    border: $docborder;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgb(116, 116, 116);
+    td {
+        @include normal;
+        padding: 0.3em;
+    }
+    th {
+        border: $docborder;
+        font-size: 1.8em;
+        @include normal;
+        background-color: #ddd;
+    }
+}
