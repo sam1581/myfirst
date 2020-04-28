@@ -10,15 +10,27 @@ function md(){
     .pipe(dest("./dist/") );
 }
 
-function source(){
-    return src("./src/**/*.*")
+function js(){
+    return src("./src/**/*.js")
+    .pipe(dest("./dist/") );
+}
+
+function css(){
+    return src("./src/**/*.css")
+    .pipe(dest("./dist/") );
+}
+
+function html(){
+    return src("./src/**/*.html")
     .pipe(dest("./dist/") );
 }
 
 function watchAll(){
     watch("./*.md", md);
-    watch("./src/**/*.*", source);
+    watch("./src/**/*.js", js);
+    watch("./src/**/*.css", css);
+    watch("./src/**/*.html", html);
 }
 
-exports.default = parallel([watchAll,series([md,source])]);
+exports.default = parallel([watchAll,series([md,js,css, html])]);
 
