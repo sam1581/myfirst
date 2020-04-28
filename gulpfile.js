@@ -10,9 +10,15 @@ function md(){
     .pipe(dest("./dist/") );
 }
 
-function watchAll(){
-    watch("./*.md", md);
-    
+function source(){
+    return src("./src/**/*.*")
+    .pipe(dest("./dist/") );
 }
 
-exports.default = parallel([watchAll,series([md])]);
+function watchAll(){
+    watch("./*.md", md);
+    watch("./src/**/*.*", source);
+}
+
+exports.default = parallel([watchAll,series([md,source])]);
+
